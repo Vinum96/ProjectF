@@ -1,0 +1,35 @@
+.order_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.txt_black {
+  color: var(--txt-black, #282828);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.txt_grey {
+  color: var(--txt-grey, #8B8B8B);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.total_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  align-self: stretch;
+}
+
+.total_price {
+  color: var(--txt-black, #282828);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 110%;
+}

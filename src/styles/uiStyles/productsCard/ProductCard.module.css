@@ -1,0 +1,125 @@
+.product_container {
+  display: flex;
+  height: 440px;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: var(--radius-big, 12px);
+  border: 1px solid var(--grey-divider, #ddd);
+}
+
+.img_container {
+  position: relative;
+}
+
+.img_products {
+  border-radius: var(--radius-big, 12px) var(--radius-big, 12px) 0 0;
+  width: 316px;
+  height: 284px;
+  border-bottom: 1px solid var(--grey-divider, #ddd);
+  background-size: cover;
+  background-position: center;
+}
+
+.btnAdd {
+  width: 284px;
+  padding: 16px 32px;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  border: none;
+  border-radius: var(--radius-small, 6px);
+  background: var(--green, #393);
+  color: var(--txt-white, #fff);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  transform: scale(1);
+  /* box-shadow: 0px 7px 6px 0px var(--green, #393); */
+  opacity: 0;
+}
+
+.product_container:hover .btnAdd {
+  opacity: 1;
+}
+
+.btnAdd:hover {
+  background: var(--black, #282828);
+  /* box-shadow: 0px 10px 10px 0px rgb(0 0 0); */
+  transform: scale(1.04);
+}
+
+.btnAdd:active {
+  background: var(--txt-white, #282828);
+  /* box-shadow: 0px 4px 4px 0px var(--txt-white, #fff); */
+  transform: scale(1);
+  transition: all 0.1s ease-out;
+  color: #282828;
+}
+
+.discount {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  padding: 4px 8px;
+  border-radius: var(--radius-small, 6px);
+  background: var(--green, #393);
+  text-align: center;
+  color: var(--txt-white, #fff);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.6px;
+}
+
+.description_container {
+  width: 310px;
+  padding: 0 16px 16px 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 16px;
+}
+
+.title {
+  max-height: 52px;
+  /* overflow: hidden; */
+  color: var(--txt-black, #282828);
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.title::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.price_container {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 16px;
+}
+
+.price {
+  color: var(--txt-black, #282828);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.discount_price {
+  color: var(--txt-grey, #8b8b8b);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  text-decoration-line: line-through;
+}

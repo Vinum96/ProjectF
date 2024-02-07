@@ -1,0 +1,36 @@
+.form_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.btn,
+.input {
+  padding: 16px 32px;
+  align-self: stretch;
+  border-radius: var(--radius-small, 6px);
+  border: 1px solid var(--white, #FFF);
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.input {
+  font-weight: 500;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn {
+  width: 516px;
+  font-weight: 600;
+}

@@ -1,0 +1,37 @@
+.cartPage_container {
+  padding: 40px 40px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.cartLine {
+  width: 700px;
+}
+
+.cart_container {
+  display: flex;
+  column-gap: 32px;
+}
+
+.form_container {
+  width: 548px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  border-radius: var(--radius-big, 12px);
+  background: var(--light-grey, #f1f3f4);
+}
+
+.input {
+  color: var(--txt-grey, #8b8b8b);
+  border: 1px solid var(--grey-divider, #ddd);
+}
+
+.btn {
+  justify-content: center;
+  background: var(--green, #393);
+  color: var(--txt-white, #fff);
+}

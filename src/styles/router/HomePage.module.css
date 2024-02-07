@@ -1,0 +1,38 @@
+.home_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  overflow: auto;
+}
+
+.categoriesLine {
+  width: 832px;
+}
+
+.home_padding {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  padding: 0 40px;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.categories_container {
+  display: flex;
+  gap: 32px;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+}
+
+.img_categories {
+  width:  19.75rem;
+  height: 350px;
+  align-self: stretch;
+  border-radius: var(--radius-big, 12px);
+  background: lightgray 50% / cover no-repeat;
+}
