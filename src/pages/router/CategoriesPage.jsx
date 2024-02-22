@@ -3,6 +3,7 @@ import styles from "../../styles/router/CategoriesPage.module.css";
 import CategoryCard from "../../ui/productsCard/CategoryCard";
 import NavigationPath from "../../ui/reused/NavigationPath";
 import { useGetCategoriesAllQuery } from "../../redux/api/productApi";
+import BackToTopButton from "../../ui/reused/BackToTopButton";
 
 let categories = [];
 const paths = ["Main page", "Categories"];
@@ -24,6 +25,7 @@ function CategoriesPage() {
         classNameCategoriesContainer={styles.categories}
         classNameImg={styles.img}
       />
+      <BackToTopButton />
     </div>
   );
 }

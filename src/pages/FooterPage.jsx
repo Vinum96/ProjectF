@@ -1,7 +1,7 @@
-import React from 'react'
-import styles from '../styles/FooterPage.module.css'
-import ContactInfo from '../components/footerComponents/ContactInfo'
-import Map from '../components/footerComponents/Map'
+import React from "react";
+import styles from "../styles/FooterPage.module.css";
+import ContactInfo from "../components/footerComponents/ContactInfo";
+import Map from "../components/footerComponents/Map";
 
 function FooterPage() {
   return (
@@ -9,7 +9,7 @@ function FooterPage() {
       <ContactInfo />
       <Map />
     </footer>
-  )
+  );
 }
 
-export default FooterPage
+export default FooterPage;

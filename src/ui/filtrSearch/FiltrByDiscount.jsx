@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import styles from "../../styles/uiStyles/filters/FilterByDiscount.module.css";
 
-function FiltrByDiscount() {
+function FilterByDiscount({ className, ...props }) {
   return (
-    <div>FiltrByDiscount</div>
-  )
+    <label>
+      <input {...props} type="checkbox" className={styles.real_checkbox} />
+      Discounted items
+      <span className={styles.fake_checkbox}></span>
+    </label>
+  );
 }
 
-export default FiltrByDiscount
+export default FilterByDiscount;

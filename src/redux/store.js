@@ -3,9 +3,13 @@ import { productApi } from "./api/productApi";
 import storage from "redux-persist/lib/storage";
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 import CartSlice from "./slices/CartSlice";
+import ProductSlice from "./slices/ProductSlice";
+import CategoryProductsSlice from "./slices/CategoryProductsSlice";
 
 const rootReducer = combineReducers({
   cartProducts: CartSlice,
+  products: ProductSlice,
+  categoryProducts: CategoryProductsSlice,
   [productApi.reducerPath]: productApi.reducer,
 });
 

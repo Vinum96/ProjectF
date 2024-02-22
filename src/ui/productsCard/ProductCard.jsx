@@ -16,29 +16,33 @@ function ProductCard({ products, classNameContainer }) {
 
   return (
     <div className={classNameContainer}>
-      {products.map((product) => (
-        <div className={styles.product_container} key={product.id}>
-          <div className={styles.img_container}>
-            <NavLink to={"/ProductPage"} state={{ id: product.id, title: product.title }}>
-              <div className={styles.img_products} style={{ backgroundImage: `url(${BASE_URL + product.image})` }}></div>
-            </NavLink>
-            <button onClick={() => addProductToCart(product)} className={styles.btnAdd}>
-              Add to cart
-            </button>
-            <PercentDiscount product={product} classNameDiscount={styles.discount} />
-          </div>
+      {products &&
+        products.map((product) => (
+          <div className={styles.product_container} key={product.id}>
+            <div className={styles.img_container}>
+              <NavLink to={"/ProductPage"} state={{ id: product.id, title: product.title }}>
+                <div
+                  className={styles.img_products}
+                  style={{ backgroundImage: `url(${BASE_URL + product.image})` }}
+                ></div>
+              </NavLink>
+              <button onClick={() => addProductToCart(product)} className={styles.btnAdd}>
+                Add to cart
+              </button>
+              <PercentDiscount product={product} classNameDiscount={styles.discount} />
+            </div>
 
-          <div className={styles.description_container}>
-            <p className={styles.title}>{product.title}</p>
-            <CheckingDiscountPrice
-              product={product}
-              classNameContainer={styles.price_container}
-              classNamePrice={styles.price}
-              classNameDiscountPrice={styles.discount_price}
-            />
+            <div className={styles.description_container}>
+              <p className={styles.title}>{product.title}</p>
+              <CheckingDiscountPrice
+                product={product}
+                classNameContainer={styles.price_container}
+                classNamePrice={styles.price}
+                classNameDiscountPrice={styles.discount_price}
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }

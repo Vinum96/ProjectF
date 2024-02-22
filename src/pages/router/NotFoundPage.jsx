@@ -1,8 +1,9 @@
-import React from 'react'
-import styles from '../../styles/router/NotFoundPage.module.css'
-import cactus from '../../images/cactus.png'
-import four from '../../images/four.png'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import styles from "../../styles/router/NotFoundPage.module.css";
+import cactus from "../../images/cactus.png";
+import four from "../../images/four.png";
+import { NavLink } from "react-router-dom";
+import BackToTopButton from "../../ui/reused/BackToTopButton";
 
 function NotFoundPage() {
   return (
@@ -22,12 +23,13 @@ function NotFoundPage() {
           </p>
         </div>
 
-        <NavLink to={''}>
+        <NavLink to={""}>
           <button className={styles.btn}>Go Home</button>
         </NavLink>
       </div>
+      <BackToTopButton />
     </div>
-  )
+  );
 }
 
-export default NotFoundPage
+export default NotFoundPage;

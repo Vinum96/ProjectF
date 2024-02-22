@@ -1,7 +1,7 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Header from '../../pages/HeaderPage'
-import Footer from '../../pages/FooterPage'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../../pages/HeaderPage";
+import Footer from "../../pages/FooterPage";
 
 function Layout() {
   return (
@@ -10,7 +10,7 @@ function Layout() {
       <Outlet />
       <Footer />
     </>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

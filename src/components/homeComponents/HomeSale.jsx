@@ -1,30 +1,23 @@
-import React from 'react'
-import styles from '../../styles/homeStyles/HomeSale.module.css'
-import BlockNameBtn from '../../ui/reused/BlockNameBtn';
-import ProductCard from '../../ui/productsCard/ProductCard';
-import { useGetAllProductsQuery } from '../../redux/api/productApi'
+import React, { useMemo } from "react";
+import styles from "../../styles/homeStyles/HomeSale.module.css";
+import BlockNameBtn from "../../ui/reused/BlockNameBtn";
+import ProductCard from "../../ui/productsCard/ProductCard";
+import { useSelector } from "react-redux";
+import { productsSelector } from "../../redux/slices/ProductSlice";
 
-let products = []
+let products = [];
 
 function HomeSale() {
-  const { data, isLoading } = useGetAllProductsQuery()
-  if (data && !isLoading) {
-    products = data.filter(product => product.discont_price).slice(0, 4)
-  } else {
-    return <div>Loading...</div>
-  }
+  const { products: allProducts } = useSelector(productsSelector);
+  products = useMemo(() => allProducts.filter((product) => product.discont_price).slice(0, 4), []);
 
   return (
     <div className={styles.homeSale_container}>
-      <BlockNameBtn
-        pageTitle='Sale'
-        btnTitle='All sales'
-        path={'AllSales'}
-        classNameLine={styles.saleLine} />
+      <BlockNameBtn pageTitle="Sale" btnTitle="All sales" path={"AllSales"} />
 
       <ProductCard products={products} classNameContainer={styles.products_container} />
-    </div >
-  )
+    </div>
+  );
 }
 
-export default HomeSale
+export default HomeSale;

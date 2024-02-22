@@ -4,18 +4,17 @@
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
+  font-size: 40px;
 }
 
 .txt_black {
   color: var(--txt-black, #282828);
-  font-size: 40px;
   font-weight: 700;
   line-height: 110%;
 }
 
 .txt_grey {
-  color: var(--txt-grey, #8B8B8B);
-  font-size: 40px;
+  color: var(--txt-grey, #8b8b8b);
   font-weight: 500;
   line-height: 130%;
 }
@@ -32,4 +31,31 @@
   font-size: 64px;
   font-weight: 700;
   line-height: 110%;
+}
+
+@media screen and (max-width: 1400px) {
+  .total_price {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .order_container {
+    gap: 12px;
+    font-size: 32px;
+  }
+
+  .total_price {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .order_container {
+    font-size: 28px;
+  }
+
+  .total_price {
+    font-size: 48px;
+  }
 }

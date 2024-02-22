@@ -5,6 +5,10 @@
     lightgray 0px -230.586px / 100% 160.195% no-repeat;
   padding: 80px 40px;
   background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
 }
 
 .banner_txt {
@@ -15,6 +19,7 @@
 }
 
 .banner_btn {
+  width: 218px;
   border-radius: var(--radius-small, 6px);
   background: var(--green, #393);
   padding: 16px 56px;
@@ -27,4 +32,41 @@
   cursor: pointer;
   scroll-behavior: smooth;
   transition: 2s;
+}
+
+@media screen and (max-width: 1440px) {
+  .banner_container {
+    height: 476px;
+    padding: 60px 20px;
+  }
+
+  .banner_txt {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .banner_container {
+    height: 720px;
+  }
+
+  .banner_txt {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner_txt {
+    font-size: 66px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .banner_container {
+    height: 768px;
+  }
+
+  .banner_txt {
+    font-size: 52px;
+  }
 }

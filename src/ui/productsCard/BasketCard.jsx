@@ -17,12 +17,21 @@ function BasketCard({ arr }) {
       {arr
         ? arr.map((product) => (
             <div key={product.id} className={styles.product_container}>
-              <img className={styles.img} src={BASE_URL + product.image} alt="img" />
+              {/* <img className={styles.img} src={BASE_URL + product.image} alt="img" /> */}
+              <div
+                className={styles.img}
+                style={{ backgroundImage: `url(${BASE_URL + product.image})` }}
+              ></div>
 
               <div className={styles.description_container}>
                 <div className={styles.title_btn}>
-                  <p className={styles.title}>{product.title}</p>
-                  <img onClick={() => remove(product)} className={styles.btn_delete} src={deleteImg} alt="img" />
+                  <span className={styles.title}>{product.title}</span>
+                  <img
+                    onClick={() => remove(product)}
+                    className={styles.btn_delete}
+                    src={deleteImg}
+                    alt="img"
+                  />
                 </div>
                 <div className={styles.btns_prices}>
                   <CounterButtons product={product} />
