@@ -1,0 +1,55 @@
+.sort_container {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.text {
+  color: rgb(40, 40, 40);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.sort_select {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  width: 200px;
+  height: 36px;
+  padding: 0 16px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 6px;
+  color: rgb(40, 40, 40);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+}
+
+.sort_option {
+  color: rgb(139, 139, 139);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+}
+
+@media screen and (max-width: 768px) {
+  .sort_container {
+    column-gap: 12px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .sort_select {
+    width: 200px;
+    height: 36px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .sort_option {
+    font-size: 14px;
+  }
+}

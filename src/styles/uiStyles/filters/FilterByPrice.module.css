@@ -1,0 +1,39 @@
+.price_container {
+  width: 309px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.price {
+  color: var(--txt-black, #282828);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.input {
+  outline: none;
+  width: 112px;
+  height: 36px;
+  padding: 8px 16px;
+  border: 1px solid var(--grey-divider, #ddd);
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .price_container {
+    width: 295px;
+    height: 34px;
+    column-gap: 12px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .input {
+    height: 34px;
+  }
+}

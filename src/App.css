@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700&family=Oswald:wght@700&display=swap");
+
+:root {
+  --txt-black: #282828;
+  --txt-white: #fff;
+  --green: #393;
+  --light-grey: #f1f3f4;
+  --radius-small: 6px;
+  --radius-big: 12px;
+  --grey-divider: #ddd;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+.App {
+  position: relative;
+  max-width: 1440px;
+  background-color: var(--txt-white);
+}

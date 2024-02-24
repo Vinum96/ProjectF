@@ -1,0 +1,110 @@
+.header {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  border-bottom: 1px solid var(--grey-divider, #ddd);
+  background: var(--white, #fff);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.links_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 32px;
+}
+
+.link {
+  color: var(--txt-black, #282828);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  text-decoration: none;
+}
+
+.active {
+  color: var(--green, #393);
+}
+
+.icon_logo {
+  width: 70px;
+  height: 70px;
+}
+
+.cartBurger_container {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgb(51, 153, 51);
+  color: var(--white, #fff);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 90%;
+}
+
+.icon_cart {
+  width: 48px;
+  height: 48px;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    height: 110px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 68px;
+  }
+
+  .links_container {
+    display: none;
+  }
+
+  .cartBurger_container {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  .link {
+    font-size: 24px;
+  }
+
+  .icon_logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .icon_cart {
+    width: 32px;
+    height: 32px;
+  }
+
+  .count {
+    width: 18px;
+    height: 18px;
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .link {
+    font-size: 18px;
+  }
+}

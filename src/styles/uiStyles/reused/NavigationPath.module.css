@@ -1,0 +1,39 @@
+.path_container {
+  display: flex;
+  align-items: center;
+}
+
+.path_txt {
+  display: flex;
+  align-items: center;
+}
+
+.firs_line {
+  display: none;
+}
+
+.path {
+  color: rgb(139, 139, 139);
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+  border-radius: var(--radius-small, 6px);
+  border: 1px solid var(--grey-divider, #ddd);
+}
+
+.last_path {
+  color: var(--txt-black, #282828);
+}
+
+.line {
+  width: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  .path_container {
+    display: none;
+  }
+}

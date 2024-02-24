@@ -1,0 +1,87 @@
+@media screen and (max-width: 768px) {
+  .burger {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 30;
+  }
+
+  .burger span {
+    width: 100%;
+    border: 2px solid var(--txt-black, #282828);
+    transform: scale(1);
+  }
+
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    width: 87%;
+    border: 2px solid var(--txt-black, #282828);
+    transition: all 0.7s ease 0s;
+  }
+
+  .burger::before {
+    top: 0px;
+  }
+
+  .burger::after {
+    bottom: 0px;
+  }
+
+  .active span {
+    transform: scale(0);
+  }
+
+  .active::before {
+    top: 47%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+
+  .active::after {
+    bottom: 47%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+
+  .main_container {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    width: 55%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .links_burger {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    padding: 80px 40px;
+    width: 55%;
+    height: 100%;
+    background: var(--txt-white, #fff);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 29;
+    font-size: 40px;
+    animation: burgerAnimation 0.4s;
+  }
+
+  @keyframes burgerAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
